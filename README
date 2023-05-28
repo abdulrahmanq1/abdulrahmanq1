@@ -1,0 +1,37 @@
+Code Description:
+[10:08 pm, 28/05/2023] shanshal bau turkey: The code begins by importing necessary libraries for data analysis and visualization. Data is then read from multiple CSV files and merged into a single DataFrame. The code explores the data by providing information about columns, checking for missing values, and analyzing unique values in specific columns. Stroke data is further analyzed by separating positive and negative cases, counting occurrences, and creating a DataFrame for visualization. A bar plot is created using a library to visualize stroke decisions by gender. Additionally, a function is defined to plot stroke data based on gender ranges. The code also includes subplot figures and utilizes the function to display multiple plots. The aim of the code is to analyze and visualize stroke-related data.
+[10:08 pm, 28/05/2023] shanshal bau turkey: The code begins by importing the necessary libraries (pandas, numpy, matplotlib.pyplot, seaborn, and plotly) to work with data analysis and visualization.
+
+The data is read from four CSV files (healthcare.csv, sample.csv, test.csv, and train.csv) using the pd.read_csv() function. The data from each file is stored in separate DataFrames (df1, df2, df3, and df4).
+
+The four DataFrames are merged into a single DataFrame (df) using the pd.concat() function.
+
+The code then explores the data:
+
+df.shape prints the number of rows and columns in the DataFrame.
+df.info() provides information about the columns, such as their names, data types, and the number of non-null values.
+df.describe() generates summary statistics (count, mean, min, max, quartiles) for the numerical columns.
+df.isnull().sum() calculates the number of missing values in each column.
+df['gender'].unique() prints the unique values in the 'gender' column.
+df['stroke'].unique() prints the unique values in the 'stroke' column.
+The code analyzes stroke data:
+
+It separates the data into two DataFrames based on the 'stroke' column: s_yes for positive stroke cases and s_no for negative stroke cases.
+The counts of positive and negative stroke cases are printed.
+The code counts the occurrences of each gender in the overall dataset (df['gender'].value_counts()) and in positive and negative stroke cases (s_yes['gender'].value_counts() and s_no['gender'].value_counts()).
+A new DataFrame stroke_dec is created to store the gender counts and stroke counts for visualization.
+The code uses the plotly library to create a bar plot (go.Bar) to visualize stroke decisions by gender:
+
+The bar plot is created using the data from stroke_dec.
+The plot is customized with titles and axis labels using layout settings.
+The figure is then plotted using py.offline.iplot(fig).
+A function named strokepeople is defined to plot stroke data for a specific range of genders:
+
+The function takes a start and end index to determine the range of genders to plot.
+The function uses plt.bar() to create a bar plot for total people, negative stroke cases, and positive stroke cases.
+The x-axis positions and widths of the bars are calculated.
+The function sets the x-axis ticks and labels using plt.xticks().
+The plt.legend() function adds a legend to the plot.
+The code creates a subplot figure (fig = plt.figure(figsize=(25, 15))) to display multiple plots in one figure.
+
+The plt.subplot() function is used to create subplots, and strokepeople() is called to plot stroke data for different ranges of genders
