@@ -1,6 +1,5 @@
 Code Description:
-[10:08 pm, 28/05/2023] shanshal bau turkey: The code begins by importing necessary libraries for data analysis and visualization. Data is then read from multiple CSV files and merged into a single DataFrame. The code explores the data by providing information about columns, checking for missing values, and analyzing unique values in specific columns. Stroke data is further analyzed by separating positive and negative cases, counting occurrences, and creating a DataFrame for visualization. A bar plot is created using a library to visualize stroke decisions by gender. Additionally, a function is defined to plot stroke data based on gender ranges. The code also includes subplot figures and utilizes the function to display multiple plots. The aim of the code is to analyze and visualize stroke-related data.
-[10:08 pm, 28/05/2023] shanshal bau turkey: The code begins by importing the necessary libraries (pandas, numpy, matplotlib.pyplot, seaborn, and plotly) to work with data analysis and visualization.
+The code begins by importing the necessary libraries (pandas, numpy, matplotlib.pyplot, seaborn, and plotly) to work with data analysis and visualization.
 
 The data is read from four CSV files (healthcare.csv, sample.csv, test.csv, and train.csv) using the pd.read_csv() function. The data from each file is stored in separate DataFrames (df1, df2, df3, and df4).
 
@@ -34,4 +33,4 @@ The function sets the x-axis ticks and labels using plt.xticks().
 The plt.legend() function adds a legend to the plot.
 The code creates a subplot figure (fig = plt.figure(figsize=(25, 15))) to display multiple plots in one figure.
 
-The plt.subplot() function is used to create subplots, and strokepeople() is called to plot stroke data for different ranges of genders
+The plt.subplot() function is used to create subplots, and strokepeople() is called to plot stroke data for different ranges of genders.
